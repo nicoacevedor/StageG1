@@ -16,8 +16,8 @@ if not cam.isCameraStarted(1):
 cam_top = cam.subscribeCamera("cam_top", 0, 2, 11, 30)
 cam_bot = cam.subscribeCamera("cam_bot", 0, 2, 11, 30)
 
-# img_top = cam.getImageLocal(cam_top)
-# img_bot = cam.getImageLocal(cam_bot)
+# img_top = cam.getImageRemote(cam_top)
+# img_bot = cam.getImageRemote(cam_bot)
 
 tts = ALProxy("ALTextToSpeech", "localhost", 45073)
 tts.say("Hello World!")
