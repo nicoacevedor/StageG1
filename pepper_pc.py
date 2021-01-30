@@ -1,6 +1,6 @@
 from naoqi import ALProxy
 
-cam = ALProxy("ALVideoDevice", "localhost", 55867) # IP of the robot | port
+cam = ALProxy("ALVideoDevice", "ilisa.local", 9559) # IP of the robot | port
 # subscribeCamera(Name, CameraIndex, Resolution, ColorSpace, Fps)
 # 640x480 | RGB | 30 fps
 if not cam.isCameraOpen(0):
@@ -14,10 +14,11 @@ if not cam.isCameraStarted(1):
     cam.startCamera(1)
 
 cam_top = cam.subscribeCamera("cam_top", 0, 2, 11, 30)
-cam_bot = cam.subscribeCamera("cam_bot", 0, 2, 11, 30)
+cam_bot = cam.subscribeCamera("cam_bot", 1, 2, 11, 30)
 
-# img_top = cam.getImageRemote(cam_top)
-# img_bot = cam.getImageRemote(cam_bot)
+img_top = cam.getImageRemote(cam_top)
+img_bot = cam.getImageRemote(cam_bot)
+print type(img_top)
 
-tts = ALProxy("ALTextToSpeech", "localhost", 45073)
-tts.say("Hello World!")
+tts = ALProxy("ALTextToSpeech", "ilisa.local", 9559)
+tts.say("Bonjour!")
