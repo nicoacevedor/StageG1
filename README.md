@@ -1,2 +1,2 @@
 # stage
-IA stage dans le laboratoire ISLI de l'Université de Lille
+IA stage dans le laboratoire ILIS de l'Université de Lille
