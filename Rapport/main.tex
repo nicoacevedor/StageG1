@@ -1,0 +1,62 @@
+% Template:     Template Reporte LaTeX
+% Documento:    Archivo principal
+% Versión:      2.1.4 (05/01/2021)
+% Codificación: UTF-8
+%
+% Autor: Pablo Pizarro R.
+%        Facultad de Ciencias Físicas y Matemáticas
+%        Universidad de Chile
+%        pablo@ppizarror.com
+%
+% Sitio web:    [https://latex.ppizarror.com/reporte]
+% Licencia MIT: [https://opensource.org/licenses/MIT]
+
+% CREACIÓN DEL DOCUMENTO
+\documentclass[letterpaper,oneside]{article}
+
+% INFORMACIÓN DEL DOCUMENTO
+\def\titulodelreporte {Rapport de Stage}
+\def\temaatratar {Stage G1}
+\def\fechadelreporte {26 février 2021}
+
+\def\autordeldocumento {Nicolas Acevedo}
+\def\nombredelcurso {Stage G1}
+\def\codigodelcurso {}
+
+\def\nombreuniversidad {Universidad de Chile}
+\def\nombrefacultad {Facultad de Ciencias Físicas y Matemáticas}
+\def\departamentouniversidad {Departamento de Ingeniería Matemática}
+\def\imagendepartamento {departamentos/dim}
+\def\localizacionuniversidad {Santiago, Chile}
+
+% IMPORTACIÓN DEL TEMPLATE
+\input{template}
+
+% INICIO DE PÁGINAS
+\begin{document}
+	
+% CONFIGURACIÓN DE PÁGINA Y ENCABEZADOS
+\templatePagecfg
+
+% CONFIGURACIONES FINALES
+\templateFinalcfg
+
+% ======================= INICIO DEL DOCUMENTO =======================
+
+% Título y nombre del autor
+\inserttitle
+
+% Resumen o Abstract
+
+% Ejemplo, se puede borrar
+\sectionanum{Introduction}
+De nos jours, il est impératif de respecter les mesures de sécurité sociale pour éviter la contagion et la propagation du virus COVID-19, comme le lavage constant des mains, respecter la distance sociale d'au moins un mettre entre les personnes, et l'utilisation du masque pour se protéger et protéger les autres.\\
+
+Avec l'objectif d'aider à respecter ces mesures, un système robotique a été développé pour détecter et signaler si les personnes portent ses masques et gardent la distance minimale afin de diminuer la probabilité de propagation du virus.
+
+\sectionanum{Intelligence Artificiel actuellement}
+
+%\input{example}
+
+% FIN DEL DOCUMENTO
+\end{document}
