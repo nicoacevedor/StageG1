@@ -9,12 +9,10 @@
 
 
 import cv2
-from naoqi import ALProxy
 import os
 import numpy as np
 import tensorflow as tf
 import qi
-import argparse
 import sys
 
 # Detection de visages à l'aide du model Cafee Model Zoo
@@ -26,17 +24,7 @@ model = cv2.dnn.readNetFromCaffe(prototxt_path, caffemodel_path)
 #Chargement du modèle permettant de détecter le port du masque
 modelMasque = tf.keras.models.load_model("QSTOMIT-MASQUE.model")
 
-# camera = ALProxy("ALVideoDevice", "192.168.0.102", 9559)
-# resolution = 2
-# colorSpace = 11
-#
-# if not camera.isCameraStarted(0):
-#     camera.startCamera(0)
-# if not camera.isCameraOpen(0):
-#     camera.openCamera(0)
-#
-# camera_top = camera.subscribeCamera("camera_top", 0, 2, 11, 5)
-
+# Appel au robot
 session = qi.Session()
 try:
     session.connect("tcp://192.168.0.102:9559")
@@ -49,7 +37,6 @@ try:
 except RuntimeError:
     print ("Cannot connect to the camera")
     sys.exit(1)
-# camera_top = camera.subscribeCamera("camera_top", 0, 2, 11, 15)
 
 
 while True:
