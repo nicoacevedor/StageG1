@@ -9,6 +9,7 @@
         <File name="QSTOMIT-MASQUE" src="resources/QSTOMIT-MASQUE.model" />
         <File name="deploy" src="resources/deploy.prototxt" />
         <File name="weights" src="resources/weights.caffemodel" />
+        <File name="icon" src="icon.png" />
     </Resources>
     <Topics />
     <IgnoredPaths />

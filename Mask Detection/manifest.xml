@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <package uuid="maskdetection-d6eec7" version="0.0.0">
  <names>
-  <name lang="en_US">Untitled</name>
+  <name lang="en_US">Mask Detection</name>
+  <name lang="fr_FR">Detection du Masque</name>
  </names>
  <supportedLanguages>
   <language>en_US</language>

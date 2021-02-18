@@ -29,6 +29,8 @@ cap = cv2.VideoCapture(0)
 while True:
 
     _, image = cap.read()
+    # cv2.imwrite("ld.png", image)
+    # image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
 
     blob = cv2.dnn.blobFromImage(cv2.resize(image, (300, 300)), 1.0, (300, 300), (104.0, 177.0, 123.0))
     model.setInput(blob)
@@ -37,6 +39,7 @@ while True:
 
     h = image.shape[0]
     w = image.shape[1]
+
 
     for i in range(0, detections.shape[2]):
         box = detections[0, 0, i, 3:7] * np.array([w, h, w, h])

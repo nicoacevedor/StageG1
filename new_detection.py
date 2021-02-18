@@ -39,13 +39,14 @@ modelMasque = tf.keras.models.load_model("QSTOMIT-MASQUE.model")
 
 session = qi.Session()
 try:
-    session.connect("tcp://192.168.0.102:9559")
+    session.connect("tcp://ilisa.local:9559")
 except RuntimeError:
     print ("Cannot connect to Pepper")
     sys.exit(1)
 camera = session.service("ALVideoDevice")
+tts = session.service("ALTextToSpeech")
 try:
-    camera_top = camera.subscribeCamera("camera_top", 0, 2, 11, 30)
+    camera_top = camera.subscribeCamera("camera", 0, 2, 11, 30)
 except RuntimeError:
     print ("Cannot connect to the camera")
     sys.exit(1)
@@ -62,15 +63,21 @@ while True:
         break
     elif image[6] == None:
         print "No image data string"
+        camera.closeCamera(0)
+        camera.stopCamera(0)
+        break
     else:
-        h = image[0]
-        w = image[1]
         image = np.array(image[6])
-        image = np.reshape(image, (w, h, 3))
+        image = np.reshape(image, (480, 640, 3))
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
         blob = cv2.dnn.blobFromImage(cv2.resize(image, (300, 300)), 1.0, (300, 300), (104.0, 177.0, 123.0))
         model.setInput(blob)
         detections = model.forward()
+        h = image.shape[0]
+        w = image.shape[1]
+
+        pM_counter = 0
+        aM_counter = 0
 
         for i in range(0, detections.shape[2]):
             box = detections[0, 0, i, 3:7] * np.array([w, h, w, h])
@@ -92,13 +99,21 @@ while True:
                 if (pasDeMasque > avecMasque):
                     cv2.rectangle(image, (startX, startY), (endX, endY),(0, 0, 255), 2)
                     cv2.putText(image, "PAS DE MASQUE", (startX, startY-10),cv2.FONT_HERSHEY_SIMPLEX, 0.45, (0, 0, 255), 2)
+                    pM_counter += 1
                 else:
                     cv2.rectangle(image, (startX, startY), (endX, endY),(0, 255, 0), 2)
                     cv2.putText(image, "OK", (startX, startY), cv2.FONT_HERSHEY_SIMPLEX, 0.45, (0, 255, 255), 2)
+                    aM_counter += 1
 
 
         # Affichage de l'image
         cv2.imshow('img', image)
+
+    if pM_counter > aM_counter:
+        # tts.say("Pas de Masque! Mettre votre masque s'il vous plaît")
+        tts.say("Ponté la mascara goiton culiào")
+    else:
+        tts.say("Merci d'utiliser votre masque!")
 
     k = cv2.waitKey(30) & 0xff
     if k==27:

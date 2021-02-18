@@ -64,6 +64,7 @@ class MyClass(GeneratedClass):
             h = image.shape[0]
             w = image.shape[1]
 
+
             for i in range(0, detections.shape[2]):
                 box = detections[0, 0, i, 3:7] * np.array([w, h, w, h])
                 (startX, startY, endX, endY) = box.astype("int")
@@ -81,21 +82,14 @@ class MyClass(GeneratedClass):
                     pasDeMasque = predict[0][0]
                     avecMasque = predict[0][1]
 
-                    if (pasDeMasque >= 0.75):
-                        self.useMasque("Mettre votre masque!")
+                    if (pasDeMasque > avecMasque):
+                        self.useMasque("Pas de Masque! Mettre votre masque s'il vous plaît")
                         cv2.rectangle(image, (startX, startY), (endX, endY),(0, 0, 255), 2)
                         cv2.putText(image, "PAS DE MASQUE", (startX, startY-10),cv2.FONT_HERSHEY_SIMPLEX, 0.45, (0, 0, 255), 2)
-                        cv2.putText(image, str(pasDeMasque*100)+"%", (endX, endY), cv2.FONT_HERSHEY_SIMPLEX, 0.45, (0, 0, 255), 2)
-                    elif (pasDeMasque > 0.5 and pasDeMasque < 0.75):
-                        self.usedeMasque("Ajustez bien votre masque!")
-                        cv2.rectangle(image, (startX, startY), (endX, endY),(0, 255, 255), 2)
-                        cv2.putText(image, "MASQUE MAL AJUSTÉ", (startX, startY-10),cv2.FONT_HERSHEY_SIMPLEX, 0.45, (0, 0, 255), 2)
-                        cv2.putText(image, str(pasDeMasque*100)+"%", (endX, endY), cv2.FONT_HERSHEY_SIMPLEX, 0.45, (0, 0, 255), 2)
                     else:
                         self.useMasque("Merci d'utiliser votre masque!")
                         cv2.rectangle(image, (startX, startY), (endX, endY),(0, 255, 0), 2)
                         cv2.putText(image, "OK", (startX, startY), cv2.FONT_HERSHEY_SIMPLEX, 0.45, (0, 255, 255), 2)
-                        cv2.putText(image, str(avecMasque*100)+"%", (endX, endY), cv2.FONT_HERSHEY_SIMPLEX, 0.45, (0, 255, 255), 2)
 
 
             # Affichage de l'image
