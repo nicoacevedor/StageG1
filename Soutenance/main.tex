@@ -1,6 +1,7 @@
+\PassOptionsToPackage{dvipsnames}{xcolor}
 \documentclass{cubeamer}
 
-\usepackage{listings}
+\usepackage{xcolor}
 
 
 \title{Soutenance Stage G1}
@@ -10,6 +11,7 @@
 \institute[École Centrale de Lille]{}
 %\copyrightnotice{Published by the American Institute of Aeronautics and Astronautics, Inc., with permission}
 
+\newcommand{\tab}{\- \- \- \-}
 \begin{document}
 
 \maketitle
@@ -18,23 +20,105 @@
 
 \section{Introduction}
 
-\begin{frame}{Introduction}
+\begin{frame}
 	\begin{figure}
 		\includegraphics[height = 0.7\textheight]{img/peppermask.png}
 	\end{figure}
 \end{frame}
 
-\begin{frame}{Model}
-
-\end{frame}
+%\begin{frame}[fragile]
+%\begin{semiverbatim}
+%baseModel = VGG16(weights="imagenet", include_top=False,
+%\tab \tab \tab input_tensor=Input(shape=(224, 224, 3)))
+%
+%sortieVGG = baseModel.output
+%sortieVGG = Flatten(name="flatten")(sortieVGG)
+%sortieVGG = Dense(512, activation="relu")(sortieVGG)
+%sortieVGG = Dropout(0.5)(sortieVGG)
+%sortieVGG = Dense(2, activation="softmax")(sortieVGG)
+%
+%model = Model(inputs=baseModel.input, outputs=sortieVGG)
+%\end{semiverbatim}
+%\end{frame}
 
 \section{Implementation}
 
 \begin{frame}[fragile]
-	\begin{lstlisting}
-		
-	\end{lstlisting}
+	\begin{semiverbatim}
+import cv2
+import os
+import numpy as np
+import tensorflow as tf
+import qi
+import sys
+
+prototxt_path = os.path.join('resources/deploy.prototxt')
+caffemodel_path = os.path.join('resources/weights.caffemodel')
+model = cv2.dnn.readNetFromCaffe(prototxt_path, caffemodel_path)
+
+modelMasque = tf.keras.models.load_model("QSTOMIT-MASQUE.model")
+	\end{semiverbatim}
 	
 \end{frame}
+
+\begin{frame}[fragile]
+\begin{semiverbatim}
+session = qi.Session()
+session.connect("tcp://192.168.0.102:9559")
+
+tts = session.service("ALTextToSpeech")
+
+camera = session.service("ALVideoDevice")
+camera_top = camera.subscribeCamera("camera_top", 0, 2, 11, 30)
+\end{semiverbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{semiverbatim}
+while True:
+
+\tab image = camera.getImageRemote(camera_top)
+\tab h = image[0]
+\tab w = image[1]
+\tab image = np.array(image[6])
+\tab image = np.reshape(image, (w, h, 3))
+\tab image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+\tab blob = cv2.dnn.blobFromImage(cv2.resize(image, (300, 300)), 1.0, 
+\tab \tab \tab (300, 300), (104.0, 177.0, 123.0))
+\tab model.setInput(blob)
+\tab detections = model.forward()
+\end{semiverbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{semiverbatim}
+for i in range(0, detections.shape[2]):
+\tab box = detections[0, 0, i, 3:7] * np.array([w, h, w, h])
+\tab (startX, startY, endX, endY) = box.astype("int")
+
+\tab confidence = detections[0, 0, i, 2]
+
+\tab if (confidence > 0.5):
+\tab \tab frame = image[startY:endY, startX:endX]
+
+\tab \tab capture = cv2.resize(frame, (224, 224))
+\tab \tab capture = capture.reshape((1, capture.shape[0], capture.shape[1],\ \tab \tab \tab \tab \tab capture.shape[2]))
+\tab \tab predict = modelMasque.predict(capture)
+\end{semiverbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{semiverbatim}
+pasDeMasque = predict[0][0]
+avecMasque = predict[0][1]
+
+if pasDeMasque > avecMasque:
+\tab tts.say("Pas de Masque! Mettre votre masque s'il vous plaît")
+else:
+\tab tts.say("Merci d'utiliser votre masque")
+\end{semiverbatim}
+\end{frame}
+
+\section{Résultats}
 
 \end{document}

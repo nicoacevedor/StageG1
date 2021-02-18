@@ -32,6 +32,7 @@ except RuntimeError:
     print ("Cannot connect to Pepper")
     sys.exit(1)
 camera = session.service("ALVideoDevice")
+tts = session.service("ALTextToSpeech")
 try:
     camera_top = camera.subscribeCamera("camera_top", 0, 2, 11, 30)
 except RuntimeError:
@@ -43,12 +44,12 @@ while True:
 
     image = camera.getImageRemote(camera_top)
     if image == None:
-        print "Cannot capture"
+        print ("Cannot capture")
         camera.closeCamera(0)
         camera.stopCamera(0)
         break
     elif image[6] == None:
-        print "No image data string"
+        print ("No image data string")
     else:
         h = image[0]
         w = image[1]
