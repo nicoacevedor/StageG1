@@ -34,7 +34,7 @@ except RuntimeError:
 camera = session.service("ALVideoDevice")
 tts = session.service("ALTextToSpeech")
 try:
-    camera_top = camera.subscribeCamera("camera", 0, 2, 11, 30)
+    camera_top = camera.subscribeCamera("camera_top", 0, 2, 11, 30)
 except RuntimeError:
     print ("Cannot connect to the camera")
     sys.exit(1)
@@ -87,14 +87,23 @@ while True:
                     cv2.rectangle(image, (startX, startY), (endX, endY),(0, 0, 255), 2)
                     cv2.putText(image, "PAS DE MASQUE", (startX, startY-10),cv2.FONT_HERSHEY_SIMPLEX, 0.45, (0, 0, 255), 2)
                     # tts.say("Pas de Masque! Mettre votre masque s'il vous plaît")
+                    pM_counter += 1
                 else:
                     cv2.rectangle(image, (startX, startY), (endX, endY),(0, 255, 0), 2)
                     cv2.putText(image, "OK", (startX, startY), cv2.FONT_HERSHEY_SIMPLEX, 0.45, (0, 255, 255), 2)
                     # tts.say("Merci d'utiliser votre masque")
+                    aM_counter += 1
 
 
         # Affichage de l'image
         cv2.imshow('img', image)
+
+        if pM_counter > 1:
+            tts.say("Il y a "+str(pM_counter)+" personnes sans masque, mettre votre masque s'il vous plaît")
+        elif pM_counter == 1:
+            tts.say("Vous ne porte pas votre masque, mettre votre masque s'il vous plaît")
+        elif pM_counter == 0 and aM_counter > 0:
+            tts.say("Merci d'utiliser votre masque")
 
     k = cv2.waitKey(30) & 0xff
     if k==27:
