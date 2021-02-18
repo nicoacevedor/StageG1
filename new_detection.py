@@ -9,12 +9,10 @@
 
 
 import cv2
-from naoqi import ALProxy
 import os
 import numpy as np
 import tensorflow as tf
 import qi
-import argparse
 import sys
 
 # Detection de visages à l'aide du model Cafee Model Zoo
@@ -26,17 +24,7 @@ model = cv2.dnn.readNetFromCaffe(prototxt_path, caffemodel_path)
 #Chargement du modèle permettant de détecter le port du masque
 modelMasque = tf.keras.models.load_model("QSTOMIT-MASQUE.model")
 
-# camera = ALProxy("ALVideoDevice", "192.168.0.102", 9559)
-# resolution = 2
-# colorSpace = 11
-#
-# if not camera.isCameraStarted(0):
-#     camera.startCamera(0)
-# if not camera.isCameraOpen(0):
-#     camera.openCamera(0)
-#
-# camera_top = camera.subscribeCamera("camera_top", 0, 2, 11, 5)
-
+# Appel au robot
 session = qi.Session()
 try:
     session.connect("tcp://ilisa.local:9559")
@@ -50,14 +38,13 @@ try:
 except RuntimeError:
     print ("Cannot connect to the camera")
     sys.exit(1)
-# camera_top = camera.subscribeCamera("camera_top", 0, 2, 11, 15)
 
 
 while True:
 
     image = camera.getImageRemote(camera_top)
     if image == None:
-        print "Cannot capture"
+        print ("Cannot capture")
         camera.closeCamera(0)
         camera.stopCamera(0)
         break
@@ -99,21 +86,15 @@ while True:
                 if (pasDeMasque > avecMasque):
                     cv2.rectangle(image, (startX, startY), (endX, endY),(0, 0, 255), 2)
                     cv2.putText(image, "PAS DE MASQUE", (startX, startY-10),cv2.FONT_HERSHEY_SIMPLEX, 0.45, (0, 0, 255), 2)
-                    pM_counter += 1
+                    # tts.say("Pas de Masque! Mettre votre masque s'il vous plaît")
                 else:
                     cv2.rectangle(image, (startX, startY), (endX, endY),(0, 255, 0), 2)
                     cv2.putText(image, "OK", (startX, startY), cv2.FONT_HERSHEY_SIMPLEX, 0.45, (0, 255, 255), 2)
-                    aM_counter += 1
+                    # tts.say("Merci d'utiliser votre masque")
 
 
         # Affichage de l'image
         cv2.imshow('img', image)
-
-    if pM_counter > aM_counter:
-        # tts.say("Pas de Masque! Mettre votre masque s'il vous plaît")
-        tts.say("Ponté la mascara goiton culiào")
-    else:
-        tts.say("Merci d'utiliser votre masque!")
 
     k = cv2.waitKey(30) & 0xff
     if k==27:
