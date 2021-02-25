@@ -2,6 +2,10 @@
 \documentclass{cubeamer}
 
 \usepackage{xcolor}
+\usepackage{multimedia}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{bigintcalc}
 
 
 \title{Soutenance Stage G1}
@@ -13,7 +17,7 @@
 
 \newcommand{\tab}{\- \- \- \-}
 \begin{document}
-
+	
 \maketitle
 
 %\cutoc
@@ -26,25 +30,67 @@
 	\end{figure}
 \end{frame}
 
-%\begin{frame}[fragile]
-%\begin{semiverbatim}
-%baseModel = VGG16(weights="imagenet", include_top=False,
-%\tab \tab \tab input_tensor=Input(shape=(224, 224, 3)))
-%
-%sortieVGG = baseModel.output
-%sortieVGG = Flatten(name="flatten")(sortieVGG)
-%sortieVGG = Dense(512, activation="relu")(sortieVGG)
-%sortieVGG = Dropout(0.5)(sortieVGG)
-%sortieVGG = Dense(2, activation="softmax")(sortieVGG)
-%
-%model = Model(inputs=baseModel.input, outputs=sortieVGG)
-%\end{semiverbatim}
-%\end{frame}
+\begin{frame}
+\begin{minipage}{.49\textwidth}
+\begin{figure}
+	\begin{subfigure}{.45\textwidth}
+		\centering
+		% include first image
+		\includegraphics[width=.8\linewidth]{img/pm1.jpg}  
+	\end{subfigure}
+	\begin{subfigure}{.45\textwidth}
+		\centering
+		% include second image
+		\includegraphics[width=.8\linewidth]{img/pm2.jpg}  
+	\end{subfigure}
+
+	\begin{subfigure}{.45\textwidth}
+		\centering
+		% include third image
+		\includegraphics[width=.8\linewidth]{img/pm3.jpg}  
+	\end{subfigure}
+	\begin{subfigure}{.45\textwidth}
+		\centering
+		% include fourth image
+		\includegraphics[width=.8\linewidth]{img/pm4.jpg}  
+	\end{subfigure}
+	\caption{Pas de Masque}
+\end{figure}
+\end{minipage}
+\begin{minipage}{.49\textwidth}
+	
+\begin{figure}
+	\begin{subfigure}{.45\textwidth}
+		\centering
+		% include first image
+		\includegraphics[width=.8\linewidth]{img/am1.jpg}  
+	\end{subfigure}
+	\begin{subfigure}{.45\textwidth}
+		\centering
+		% include second image
+		\includegraphics[width=.8\linewidth]{img/am2.jpg}  
+	\end{subfigure}
+	
+	\begin{subfigure}{.45\textwidth}
+		\centering
+		% include third image
+		\includegraphics[width=.8\linewidth]{img/am3.jpg}  
+	\end{subfigure}
+	\begin{subfigure}{.45\textwidth}
+		\centering
+		% include fourth image
+		\includegraphics[width=.8\linewidth]{img/am4.jpg}  
+	\end{subfigure}
+	\caption{Avec Masque}
+\end{figure}
+\end{minipage}
+
+\end{frame}
 
 \section{Implementation}
 
 \begin{frame}[fragile]
-	\begin{semiverbatim}
+\begin{semiverbatim}
 import cv2
 import os
 import numpy as np
@@ -112,13 +158,44 @@ for i in range(0, detections.shape[2]):
 pasDeMasque = predict[0][0]
 avecMasque = predict[0][1]
 
+pM_counter = aM_counter = 0
+
 if pasDeMasque > avecMasque:
-\tab tts.say("Pas de Masque! Mettre votre masque s'il vous plaît")
+\tab pM_counter += 1
 else:
-\tab tts.say("Merci d'utiliser votre masque")
+\tab aM_counter += 1
 \end{semiverbatim}
 \end{frame}
 
+\begin{frame}[fragile]
+\begin{semiverbatim}
+if pM_counter > 1:
+\tab tts.say("Il y a "+str(pM_counter)+" personnes sans masque, mettre votre masque s'il vous plaît")
+elif pM_counter == 1:
+\tab tts.say("Vous ne porte pas votre masque, mettre votre masque s'il vous plaît")
+elif pM_counter == 0 and aM_counter > 0:
+\tab tts.say("Merci d'utiliser votre masque") 
+\end{semiverbatim}	
+\end{frame}
+
 \section{Résultats}
+\begin{frame}
+	\begin{columns}
+		\column{0.5\textwidth}
+		\begin{figure}[H]
+			\includegraphics[width = 0.7\textwidth]{img/avecMasque.jpeg}
+			\caption{Reconnaissance du porte de masque}
+		\end{figure}
+		\column{0.5\textwidth}
+		\begin{figure}[H]
+			\includegraphics[width = 0.7\textwidth]{img/pasDeMasque.jpeg}
+			\caption{Reconnaissance du non-masque}
+		\end{figure}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\includegraphics[width = \textwidth]{img/portada.png}
+\end{frame}
 
 \end{document}

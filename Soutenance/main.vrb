@@ -1,9 +1,8 @@
 \begin{semiverbatim}
-pasDeMasque = predict[0][0]
-avecMasque = predict[0][1]
-
-if pasDeMasque > avecMasque:
-\tab tts.say("Pas de Masque! Mettre votre masque s'il vous plaît")
-else:
+if pM_counter > 1:
+\tab tts.say("Il y a "+str(pM_counter)+" personnes sans masque, mettre votre masque s'il vous plaît")
+elif pM_counter == 1:
+\tab tts.say("Vous ne porte pas votre masque, mettre votre masque s'il vous plaît")
+elif pM_counter == 0 and aM_counter > 0:
 \tab tts.say("Merci d'utiliser votre masque")
-\end{semiverbatim}
+\end{semiverbatim}	

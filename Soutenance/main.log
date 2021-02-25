@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.30)  17 FEB 2021 12:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.30)  19 FEB 2021 10:01
 entering extended mode
 **./main.tex
 (main.tex
@@ -1404,31 +1404,35 @@ Package: subcaption 2020/08/23 v1.3g Sub-captions (AR)
 )
 (C:\Users\Nico\AppData\Local\Programs\MiKTeX\tex/latex/appendixnumberbeamer\app
 endixnumberbeamer.sty))
+(C:\Users\Nico\AppData\Local\Programs\MiKTeX\tex/latex/beamer\multimedia.sty
+Package: multimedia 2012/05/02 ver 0.02
+\mm@movie=\count389
+)
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 9.
+(hyperref)                removing `\\' on input line 13.
 
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
 (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1468,16 +1472,16 @@ LaTeX Font Info:    ... okay on input line 15.
 (C:\Users\Nico\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mki
 i
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count389
+\scratchcounter=\count390
 \scratchdimen=\dimen381
 \scratchbox=\box171
-\nofMPsegments=\count390
-\nofMParguments=\count391
+\nofMPsegments=\count391
+\nofMParguments=\count392
 \everyMPshowfont=\toks58
-\MPscratchCnt=\count392
+\MPscratchCnt=\count393
 \MPscratchDim=\dimen382
-\MPnumerator=\count393
-\makeMPintoPDFobject=\count394
+\MPnumerator=\count394
+\makeMPintoPDFobject=\count395
 \everyMPtoPDFconversion=\toks59
 )
 (C:\Users\Nico\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-ba
@@ -1487,7 +1491,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 ) ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box172
-Package hyperref Info: Link coloring OFF on input line 15.
+Package hyperref Info: Link coloring OFF on input line 19.
 
 (C:\Users\Nico\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -1499,69 +1503,69 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 estring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count395
+\c@section@level=\count396
 )
-LaTeX Info: Redefining \ref on input line 15.
-LaTeX Info: Redefining \pageref on input line 15.
-LaTeX Info: Redefining \nameref on input line 15.
+LaTeX Info: Redefining \ref on input line 19.
+LaTeX Info: Redefining \pageref on input line 19.
+LaTeX Info: Redefining \nameref on input line 19.
  (main.out) (main.out)
 \@outlinefile=\write7
 \openout7 = `main.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 15.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 19.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 15.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 19.
 \symnumbers=\mathgroup11
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 15.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 19.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
 (Font)                  OT1/mathkerncmss/m/sl --> OT1/cmss/m/it on input line 1
-5.
+9.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/mathkerncmss/bx/sl --> OT1/cmss/m/it on input line 
-15.
+19.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 15.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 15.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 15.
+(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 19.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 19.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 15.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 19.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 15.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 15.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 19.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 19.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 15.
+(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 19.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 15.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 15.
+(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 19.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 19.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 15.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 19.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 15.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 19.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 15.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 19.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 15.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 19.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/cmr/b/n on input line 15.
+(Font)                  OT1/cmss/b/n --> OT1/cmr/b/n on input line 19.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/cmss/b/n on input line 15.
+(Font)                  OT1/cmss/b/n --> OT1/cmss/b/n on input line 19.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 15.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 19.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 15.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 19.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/b/n on input line 15.
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 15.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/b/n on input line 19.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 19.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
 (Font)                  OT1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 1
-5.
+9.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/cmss/b/it --> OT1/mathkerncmss/m/sl on input line 1
-5.
+9.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on inp
-ut line 15.
+ut line 19.
 
 (C:\Users\Nico\AppData\Local\Programs\MiKTeX\tex/latex/translator\translator-ba
 sic-dictionary-English.dict
@@ -1595,35 +1599,35 @@ File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 fg
 File: siunitx-binary.cfg 2017/11/26 v2.7k siunitx: Binary units
 )
-Package csquotes Info: Making character " active on input line 15.
+Package csquotes Info: Making character " active on input line 19.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
  (main.nav)
-<img/centrale.jpg, id=24, 598.48593pt x 207.77625pt>
+<img/centrale.jpg, id=25, 598.48593pt x 207.77625pt>
 File: img/centrale.jpg Graphic file (type jpg)
 <use img/centrale.jpg>
-Package pdftex.def Info: img/centrale.jpg  used on input line 15.
+Package pdftex.def Info: img/centrale.jpg  used on input line 19.
 (pdftex.def)             Requested size: 49.16748pt x 17.07182pt.
 LaTeX Font Info:    Trying to load font information for TS1+cmss on input line 
-15.
+19.
 
 (C:\Users\Nico\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmss.fd
 File: ts1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 15.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 19.
 
 
 (C:\Users\Nico\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 15.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 19.
 
 
 (C:\Users\Nico\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
-ut line 15.
+ut line 19.
 
 (C:\Users\Nico\AppData\Local\Programs\MiKTeX\tex/latex/sansmathaccent\ot1mathke
 rncmss.fd
@@ -1632,7 +1636,7 @@ thkerncmss.
 )
 File: img/centrale.jpg Graphic file (type jpg)
 <use img/centrale.jpg>
-Package pdftex.def Info: img/centrale.jpg  used on input line 18.
+Package pdftex.def Info: img/centrale.jpg  used on input line 22.
 (pdftex.def)             Requested size: 65.55968pt x 22.76228pt.
  [1
 
@@ -1640,36 +1644,74 @@ Package pdftex.def Info: img/centrale.jpg  used on input line 18.
 pg>]
 File: img/centrale.jpg Graphic file (type jpg)
 <use img/centrale.jpg>
-Package pdftex.def Info: img/centrale.jpg  used on input line 21.
+Package pdftex.def Info: img/centrale.jpg  used on input line 25.
 (pdftex.def)             Requested size: 49.16748pt x 17.07182pt.
  [2
 
 ]
-<img/peppermask.png, id=43, 86.2422pt x 77.3289pt>
+<img/peppermask.png, id=44, 86.2422pt x 77.3289pt>
 File: img/peppermask.png Graphic file (type png)
 <use img/peppermask.png>
-Package pdftex.def Info: img/peppermask.png  used on input line 27.
+Package pdftex.def Info: img/peppermask.png  used on input line 31.
 (pdftex.def)             Requested size: 174.57893pt x 156.53474pt.
 File: img/centrale.jpg Graphic file (type jpg)
 <use img/centrale.jpg>
-Package pdftex.def Info: img/centrale.jpg  used on input line 27.
+Package pdftex.def Info: img/centrale.jpg  used on input line 31.
 (pdftex.def)             Requested size: 49.16748pt x 17.07182pt.
  [3
 
  <./img/peppermask.png>]
+<img/pm1.jpg, id=53, 160.6pt x 160.6pt>
+File: img/pm1.jpg Graphic file (type jpg)
+<use img/pm1.jpg>
+Package pdftex.def Info: img/pm1.jpg  used on input line 88.
+(pdftex.def)             Requested size: 70.2675pt x 70.26967pt.
+<img/pm2.jpg, id=54, 160.6pt x 160.6pt>
+File: img/pm2.jpg Graphic file (type jpg)
+<use img/pm2.jpg>
+Package pdftex.def Info: img/pm2.jpg  used on input line 88.
+(pdftex.def)             Requested size: 70.2675pt x 70.26967pt.
+<img/pm3.jpg, id=55, 160.6pt x 160.6pt>
+File: img/pm3.jpg Graphic file (type jpg)
+<use img/pm3.jpg>
+Package pdftex.def Info: img/pm3.jpg  used on input line 88.
+(pdftex.def)             Requested size: 70.2675pt x 70.26967pt.
+<img/pm4.jpg, id=56, 160.6pt x 160.6pt>
+File: img/pm4.jpg Graphic file (type jpg)
+<use img/pm4.jpg>
+Package pdftex.def Info: img/pm4.jpg  used on input line 88.
+(pdftex.def)             Requested size: 70.2675pt x 70.26967pt.
+<img/am1.jpg, id=57, 160.6pt x 160.6pt>
+File: img/am1.jpg Graphic file (type jpg)
+<use img/am1.jpg>
+Package pdftex.def Info: img/am1.jpg  used on input line 88.
+(pdftex.def)             Requested size: 70.2675pt x 70.26967pt.
+<img/am2.jpg, id=58, 160.6pt x 160.6pt>
+File: img/am2.jpg Graphic file (type jpg)
+<use img/am2.jpg>
+Package pdftex.def Info: img/am2.jpg  used on input line 88.
+(pdftex.def)             Requested size: 70.2675pt x 70.26967pt.
+<img/am3.jpg, id=59, 160.6pt x 160.6pt>
+File: img/am3.jpg Graphic file (type jpg)
+<use img/am3.jpg>
+Package pdftex.def Info: img/am3.jpg  used on input line 88.
+(pdftex.def)             Requested size: 70.2675pt x 70.26967pt.
+<img/am4.jpg, id=60, 160.6pt x 160.6pt>
+File: img/am4.jpg Graphic file (type jpg)
+<use img/am4.jpg>
+Package pdftex.def Info: img/am4.jpg  used on input line 88.
+(pdftex.def)             Requested size: 70.2675pt x 70.26967pt.
 File: img/centrale.jpg Graphic file (type jpg)
 <use img/centrale.jpg>
-Package pdftex.def Info: img/centrale.jpg  used on input line 44.
+Package pdftex.def Info: img/centrale.jpg  used on input line 88.
 (pdftex.def)             Requested size: 49.16748pt x 17.07182pt.
  [4
 
-]
-\openout4 = `main.vrb'.
-
- (main.vrb)
+ <./img/pm1.jpg> <./img/pm2.jpg> <./img/pm3.jpg> <./img/pm4.jpg> <./img/am1.jpg
+> <./img/am2.jpg> <./img/am3.jpg> <./img/am4.jpg>]
 File: img/centrale.jpg Graphic file (type jpg)
 <use img/centrale.jpg>
-Package pdftex.def Info: img/centrale.jpg  used on input line 62.
+Package pdftex.def Info: img/centrale.jpg  used on input line 90.
 (pdftex.def)             Requested size: 49.16748pt x 17.07182pt.
  [5
 
@@ -1679,36 +1721,9 @@ Package pdftex.def Info: img/centrale.jpg  used on input line 62.
  (main.vrb)
 File: img/centrale.jpg Graphic file (type jpg)
 <use img/centrale.jpg>
-Package pdftex.def Info: img/centrale.jpg  used on input line 74.
-(pdftex.def)             Requested size: 49.16748pt x 17.07182pt.
-
-[6
-
-]
-\openout4 = `main.vrb'.
-
- (main.vrb)
-File: img/centrale.jpg Graphic file (type jpg)
-<use img/centrale.jpg>
-Package pdftex.def Info: img/centrale.jpg  used on input line 91.
-(pdftex.def)             Requested size: 49.16748pt x 17.07182pt.
- [7
-
-]
-\openout4 = `main.vrb'.
-
- (main.vrb
-Overfull \hbox (21.31561pt too wide) in paragraph at lines 12--12
-[]\OT1/cmtt/m/n/10.95 - - - - - - - - capture = capture.reshape((1, capture.sha
-pe[0], capture.shape[1],
- []
-
-)
-File: img/centrale.jpg Graphic file (type jpg)
-<use img/centrale.jpg>
 Package pdftex.def Info: img/centrale.jpg  used on input line 108.
 (pdftex.def)             Requested size: 49.16748pt x 17.07182pt.
- [8
+ [6
 
 ]
 \openout4 = `main.vrb'.
@@ -1718,16 +1733,104 @@ File: img/centrale.jpg Graphic file (type jpg)
 <use img/centrale.jpg>
 Package pdftex.def Info: img/centrale.jpg  used on input line 120.
 (pdftex.def)             Requested size: 49.16748pt x 17.07182pt.
+ [7
+
+]
+\openout4 = `main.vrb'.
+
+ (main.vrb)
+File: img/centrale.jpg Graphic file (type jpg)
+<use img/centrale.jpg>
+Package pdftex.def Info: img/centrale.jpg  used on input line 137.
+(pdftex.def)             Requested size: 49.16748pt x 17.07182pt.
+ [8
+
+]
+\openout4 = `main.vrb'.
+
+
+(main.vrb
+Overfull \hbox (21.31561pt too wide) in paragraph at lines 12--12
+[]\OT1/cmtt/m/n/10.95 - - - - - - - - capture = capture.reshape((1, capture.sha
+pe[0], capture.shape[1],
+ []
+
+)
+File: img/centrale.jpg Graphic file (type jpg)
+<use img/centrale.jpg>
+Package pdftex.def Info: img/centrale.jpg  used on input line 154.
+(pdftex.def)             Requested size: 49.16748pt x 17.07182pt.
  [9
 
 ]
+\openout4 = `main.vrb'.
+
+ (main.vrb)
 File: img/centrale.jpg Graphic file (type jpg)
 <use img/centrale.jpg>
-Package pdftex.def Info: img/centrale.jpg  used on input line 122.
+Package pdftex.def Info: img/centrale.jpg  used on input line 168.
 (pdftex.def)             Requested size: 49.16748pt x 17.07182pt.
  [10
 
 ]
+\openout4 = `main.vrb'.
+
+ (main.vrb
+Overfull \hbox (176.53018pt too wide) in paragraph at lines 3--3
+[]\OT1/cmtt/m/n/10.95 - - - - tts.say("Il y a "+str(pM_counter)+" personnes san
+s masque, mettre votre masque s'il vous pla^t")[] 
+ []
+
+
+Overfull \hbox (73.0538pt too wide) in paragraph at lines 5--5
+[]\OT1/cmtt/m/n/10.95 - - - - tts.say("Vous ne porte pas votre masque, mettre v
+otre masque s'il vous pla^t")[] 
+ []
+
+)
+File: img/centrale.jpg Graphic file (type jpg)
+<use img/centrale.jpg>
+Package pdftex.def Info: img/centrale.jpg  used on input line 179.
+(pdftex.def)             Requested size: 49.16748pt x 17.07182pt.
+ [11
+
+]
+File: img/centrale.jpg Graphic file (type jpg)
+<use img/centrale.jpg>
+Package pdftex.def Info: img/centrale.jpg  used on input line 181.
+(pdftex.def)             Requested size: 49.16748pt x 17.07182pt.
+ [12
+
+]
+<img/avecMasque.jpeg, id=119, 1204.5pt x 1606.0pt>
+File: img/avecMasque.jpeg Graphic file (type jpg)
+<use img/avecMasque.jpeg>
+Package pdftex.def Info: img/avecMasque.jpeg  used on input line 195.
+(pdftex.def)             Requested size: 139.4179pt x 185.87463pt.
+<img/pasDeMasque.jpeg, id=120, 1204.5pt x 1606.0pt>
+File: img/pasDeMasque.jpeg Graphic file (type jpg)
+<use img/pasDeMasque.jpeg>
+Package pdftex.def Info: img/pasDeMasque.jpeg  used on input line 195.
+(pdftex.def)             Requested size: 139.4179pt x 185.87463pt.
+File: img/centrale.jpg Graphic file (type jpg)
+<use img/centrale.jpg>
+Package pdftex.def Info: img/centrale.jpg  used on input line 195.
+(pdftex.def)             Requested size: 49.16748pt x 17.07182pt.
+ [13
+
+ <./img/avecMasque.jpeg> <./img/pasDeMasque.jpeg>]
+<img/portada.png, id=128, 817.55438pt x 453.19313pt>
+File: img/portada.png Graphic file (type png)
+<use img/portada.png>
+Package pdftex.def Info: img/portada.png  used on input line 199.
+(pdftex.def)             Requested size: 398.3386pt x 220.81493pt.
+File: img/centrale.jpg Graphic file (type jpg)
+<use img/centrale.jpg>
+Package pdftex.def Info: img/centrale.jpg  used on input line 199.
+(pdftex.def)             Requested size: 49.16748pt x 17.07182pt.
+ [14
+
+ <./img/portada.png>]
 \tf@nav=\write8
 \openout8 = `main.nav'.
 
@@ -1737,22 +1840,22 @@ Package pdftex.def Info: img/centrale.jpg  used on input line 122.
 \tf@snm=\write10
 \openout10 = `main.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 124.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 124.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 201.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 201.
  (main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 124.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 124.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 201.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 201.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: CD6B90F6266BBABD36FB6630DDE9E880;143.
  ) 
 Here is how much of TeX's memory you used:
- 33730 strings out of 481199
- 740060 string characters out of 2906064
- 1046419 words of memory out of 3000000
- 48532 multiletter control sequences out of 15000+200000
- 549215 words of font info for 74 fonts, out of 3000000 for 9000
+ 33947 strings out of 481199
+ 743893 string characters out of 2906064
+ 1049127 words of memory out of 3000000
+ 48724 multiletter control sequences out of 15000+200000
+ 549509 words of font info for 75 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 88i,16n,111p,1806b,877s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 88i,16n,111p,1806b,898s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Nico\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcss0
 600.pk><C:/Users/Nico/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
 /cm/cmss10.pfb><C:/Users/Nico/AppData/Local/Programs/MiKTeX/fonts/type1/public/
@@ -1760,9 +1863,9 @@ amsfonts/cm/cmss12.pfb><C:/Users/Nico/AppData/Local/Programs/MiKTeX/fonts/type1
 /public/amsfonts/cm/cmss8.pfb><C:/Users/Nico/AppData/Local/Programs/MiKTeX/font
 s/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/Nico/AppData/Local/Programs/M
 iKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (10 pages, 214651 bytes).
+Output written on main.pdf (14 pages, 1499915 bytes).
 PDF statistics:
- 126 PDF objects out of 1000 (max. 8388607)
- 24 named destinations out of 1000 (max. 500000)
- 77 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 166 PDF objects out of 1000 (max. 8388607)
+ 32 named destinations out of 1000 (max. 500000)
+ 136 words of extra memory for PDF output out of 10000 (max. 10000000)
 
